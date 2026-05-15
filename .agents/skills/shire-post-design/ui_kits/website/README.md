@@ -25,7 +25,7 @@ A click-through high-fidelity recreation of the public site. Five pages cover th
 - ❌ No Tolkien/Hobbit/LotR names, places, characters, runes, ring inscriptions.
 - ❌ No round green doors, single round windows, dragon imagery, eye motifs.
 - ✅ "Shire" used only in its generic English sense in the wordmark; not in any place-name.
-- ✅ All imagery is typographic (sealmark) or stippled placeholder (no figurative art at all in this kit). Real photographs are to be sourced from open-licence libraries per `assets/IMAGE_CREDITS.md`.
+- ✅ All imagery is typographic (sealmark) or stippled placeholder (no figurative art at all in this kit). Real photographs are to be sourced from open-licence libraries per `image_credits.md`.
 
 ## Open questions for the user
 

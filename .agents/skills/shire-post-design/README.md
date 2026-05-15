@@ -163,7 +163,7 @@ The Post's imagery is **photographic, warm, daylit, and quiet**. No illustration
 
 Tone: warm-grade colour with slight grain. Avoid hyper-saturated or HDR processing. If colour is hard to control, **fall back to duotone in `ink` + `paper`**.
 
-Use open-licensed sources only (Unsplash, Wikimedia, public domain). Always credit in `assets/IMAGE_CREDITS.md`.
+Use open-licensed sources only (Unsplash, Wikimedia, public domain). Always credit in `image_credits.md`.
 
 ### Backgrounds and surfaces
 
