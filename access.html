@@ -1,24 +1,51 @@
 ---
-layout: default
-title: Request Access
+layout: page
+title: Post a Letter
+nav: apply
+permalink: /access.html
 ---
 
-<div class="container my-5">
-  <h1>Request Access</h1>
-  <p>If you believe you should have access, please fill out the form below.</p>
-  <form action="/access-confirmation" method="post">
-    <div class="mb-3">
-      <label for="name" class="form-label">Name</label>
-      <input type="text" class="form-control" id="name" name="name" required>
-    </div>
-    <div class="mb-3">
-      <label for="email" class="form-label">Email</label>
-      <input type="email" class="form-control" id="email" name="email" required>
-    </div>
-    <div class="mb-3">
-      <label for="reason" class="form-label">Reason for Access</label>
-      <textarea class="form-control" id="reason" name="reason" rows="3" required></textarea>
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
-</div>
+<div class="eyebrow">application no. 043</div>
+<h1 class="notice-title">Make application for a standing arrangement</h1>
+<div class="rule-short"></div>
+
+<p class="lede" style="margin-bottom: 28px;">
+  Standing arrangements are not currently being granted. The Post will keep
+  your note on file. There is no fee, and no obligation on either side.
+</p>
+
+<form class="notice" action="{{ '/access-confirmation.html' | relative_url }}" method="get" novalidate>
+  <div class="field">
+    <label for="name">Your name</label>
+    <input id="name" name="name" type="text" placeholder="As you wish to be addressed">
+  </div>
+
+  <div class="field">
+    <label for="reachable">Where you may be reached</label>
+    <input id="reachable" name="reachable" type="text" placeholder="A postal address, or none at all">
+    <span class="hint">A street address, a parish, or "via the counter" - whatever suits you.</span>
+  </div>
+
+  <div class="field">
+    <label for="purpose">The purpose of your correspondence</label>
+    <textarea id="purpose" name="purpose" rows="5" placeholder="A short note, in your own words."></textarea>
+  </div>
+
+  <div class="field">
+    <label for="introduction">Have you been spoken for?</label>
+    <select id="introduction" name="introduction">
+      <option>I have not</option>
+      <option>By a correspondent in good standing</option>
+      <option>At the counter, in person</option>
+      <option>By prior letter</option>
+    </select>
+  </div>
+
+  <div class="d-flex justify-content-between align-items-center mt-4">
+    <a href="{{ '/' | relative_url }}" style="font: var(--t-ledger); color: var(--ink-soft);">← Back to the counter</a>
+    <button type="submit" class="btn sp-btn sp-btn-primary">Post the application</button>
+  </div>
+  <p class="hint" style="margin-top: 12px;">
+    This public form is a simulated front-counter interaction. It does not create an account or store private records.
+  </p>
+</form>

@@ -2,17 +2,17 @@
 layout: page
 title: About
 permalink: /about/
+nav: about
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+<div class="eyebrow">public notice</div>
+<h1 class="notice-title">About the office</h1>
+<div class="rule-short"></div>
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+The Shire Post is a public front counter for a private correspondence house.
+The public rooms present notices, office hours, and routes for application.
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+Most correspondence remains behind the counter.
+No private archive, account area, or document register is exposed on this public site.
 
-
-[jekyll-organization]: https://github.com/jekyll
+This website is independent and is not affiliated with any literary, film, game, or entertainment franchise.

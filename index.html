@@ -1,21 +1,89 @@
 ---
 layout: default
 title: Home
+nav: counter
+page_class: page
 ---
 
-<div class="hero text-center my-5">
-  <h1>The Shire Post</h1>
-  <p class="lead">A quiet house of correspondence for invited readers, private notices, and well-kept archives.</p>
-  <a href="/access" class="btn btn-primary">Request Access</a>
-  <a href="/sign-in" class="btn btn-secondary">Sign In</a>
-</div>
+<section class="hero">
+  <div>
+    <div class="eyebrow">section i · welcome</div>
+    <h1 class="notice-title">The counter is open on Tuesdays and Fridays.</h1>
+    <div class="rule-short"></div>
+    <p class="lede">
+      The Shire Post is a quiet correspondence house: a place where letters are
+      franked, parcels are held for collection, and notices are pinned by the door.
+      These public pages are the front of the office.
+    </p>
+    <div class="d-flex flex-wrap gap-2 mt-4">
+      <a href="{{ '/access.html' | relative_url }}" class="btn sp-btn sp-btn-primary">Post a letter</a>
+      <a href="{{ '/sign-in.html' | relative_url }}" class="btn sp-btn sp-btn-secondary">Apply at the side window</a>
+    </div>
+    <div class="mt-4">
+      <span class="indicator">
+        <span class="dot"></span>
+        <span class="lbl">Counter open</span>
+        <span style="font: var(--t-ledger); color: var(--ink-soft);">until 17:00</span>
+      </span>
+    </div>
+  </div>
+  <div class="seal" aria-hidden="true">
+    <img src="{{ '/assets/brand/sealmark.svg' | relative_url }}" alt="">
+  </div>
+</section>
 
-<div class="notice-board my-5">
-  <h2>Public Notice Board</h2>
-  <ul>
-    <li>The public counter is open.</li>
-    <li>The archive remains available by invitation only.</li>
-    <li>Calling cards may be left through the access form.</li>
-    <li>Private correspondence is not listed, indexed, or displayed publicly.</li>
-  </ul>
-</div>
+<section style="margin-top: 32px;">
+  <div class="eyebrow">section ii · notices to correspondents</div>
+  <h2 class="notice-title">Pinned by the door</h2>
+  <div class="rule-short"></div>
+
+  <article class="notice">
+    <div class="head">
+      <span class="eyebrow">notice no. 042 · posted this week</span>
+      <span class="eyebrow">by the clerk on duty</span>
+    </div>
+    <h3>Held for collection</h3>
+    <p>A small number of parcels remain in pigeonhole 14 and may be claimed by their addressees on production of the proper mark.</p>
+  </article>
+
+  <article class="notice">
+    <div class="head">
+      <span class="eyebrow">notice no. 041 · overseas dispatch</span>
+      <span class="eyebrow">service update</span>
+    </div>
+    <h3>A pause in foreign parcels</h3>
+    <p>The Post does not at present accept overseas parcels exceeding two pounds in weight. Letters continue to be franked as usual.</p>
+  </article>
+
+  <article class="notice">
+    <div class="head">
+      <span class="eyebrow">notice no. 040 · private correspondence</span>
+      <span class="eyebrow">side window</span>
+    </div>
+    <h3>A private door</h3>
+    <p>Beyond this counter lies the working office. Correspondents with standing arrangements may <a href="{{ '/sign-in.html' | relative_url }}">apply at the side window</a>.</p>
+  </article>
+</section>
+
+<section style="margin-top: 48px;">
+  <div class="eyebrow">section iii · office hours</div>
+  <h2 class="notice-title">When the counter is staffed</h2>
+  <div class="rule-short"></div>
+  <table class="ledger" style="max-width: 640px;">
+    <caption style="caption-side: top; text-align: left; padding-bottom: 8px; color: var(--ink-soft); font: var(--t-caption);">
+      Weekly public counter hours and final dispatch times.
+    </caption>
+    <thead>
+      <tr><th scope="col">Day</th><th scope="col">Counter</th><th scope="col">Last dispatch</th><th scope="col">Status</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Monday</td><td>-</td><td>-</td><td>Closed</td></tr>
+      <tr><td>Tuesday</td><td>09:00 - 17:00</td><td>16:30</td><td>Open</td></tr>
+      <tr><td>Wednesday</td><td>-</td><td>-</td><td>Closed</td></tr>
+      <tr><td>Thursday</td><td>-</td><td>-</td><td>Closed</td></tr>
+      <tr><td>Friday</td><td>09:00 - 18:00</td><td>17:30</td><td>Open</td></tr>
+      <tr><td>Saturday</td><td>10:00 - 12:00</td><td>11:30</td><td>By appointment</td></tr>
+      <tr><td>Sunday</td><td>-</td><td>-</td><td>Closed</td></tr>
+    </tbody>
+  </table>
+</section>

@@ -1,25 +1,22 @@
 ---
 permalink: /404.html
-layout: default
+layout: page
+title: No Such Pigeonhole
+nav: pigeonholes
 ---
 
-<style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-</style>
-
-<div class="container">
-  <h1>404</h1>
-
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
-</div>
+<section style="text-align: center;">
+  <div class="eyebrow" style="margin-top: 24px;">return to sender · cause: addressee unknown</div>
+  <h1 class="notice-title" style="font-size: 96px; line-height: 1; margin: 18px 0 8px;">404</h1>
+  <div class="ornament" style="font: 400 28px var(--font-display); color: var(--brass);">❦</div>
+  <h2 class="notice-title" style="margin-top: 18px;">There is no pigeonhole by that number.</h2>
+  <div class="rule-short" style="margin-left: auto; margin-right: auto;"></div>
+  <p class="lede" style="margin-left: auto; margin-right: auto;">
+    The slip you followed does not match any letter on our shelves.
+    The address may have been mistaken, or the notice may have been taken down.
+  </p>
+  <div class="d-flex justify-content-center gap-2 mt-4">
+    <a href="{{ '/' | relative_url }}" class="btn sp-btn sp-btn-primary">Return to the counter</a>
+    <a href="{{ '/access.html' | relative_url }}" class="btn sp-btn sp-btn-secondary">Make application</a>
+  </div>
+</section>

@@ -1,9 +1,25 @@
 ---
-layout: default
-title: Access Confirmation
+layout: page
+title: Application Received
+nav: apply
+permalink: /access-confirmation.html
 ---
 
-<div class="container my-5">
-  <h1>Access Request Submitted</h1>
-  <p>Thank you for your request. If your access is approved, you will receive an email with further instructions.</p>
+<div class="slip" style="margin-top: 48px;">
+  <div class="body">
+    <div class="eyebrow" style="color: var(--hedge);">application posted</div>
+    <h2 class="notice-title" style="margin: 6px 0 8px;">Your note has been entered in the day-book.</h2>
+    <p style="font: var(--t-body); color: var(--ink-soft); margin: 0 0 16px;">
+      Thank you. The Post reviews applications at the close of business on Friday.
+      If admitted, a private word will be sent by the usual hand.
+    </p>
+    <div class="d-flex flex-wrap gap-2">
+      <a href="{{ '/' | relative_url }}" class="btn sp-btn sp-btn-primary">Return to the counter</a>
+      <a href="{{ '/sign-in.html' | relative_url }}" class="btn sp-btn sp-btn-secondary">Try the side window</a>
+    </div>
+  </div>
+  <div class="stub">
+    <span>tear here · keep this stub</span>
+    <span>043 · {{ "now" | date: "%-d-%m-%y" }}</span>
+  </div>
 </div>

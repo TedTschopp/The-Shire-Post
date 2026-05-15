@@ -1,20 +1,37 @@
 ---
-layout: default
-title: Sign In
+layout: page
+title: Side Window
+nav: window
+permalink: /sign-in.html
 ---
 
-<div class="container my-5">
-  <h1>Sign In</h1>
-  <p>Enter your credentials to access the private area.</p>
-  <form action="/sign-in-error" method="post">
-    <div class="mb-3">
-      <label for="username" class="form-label">Username</label>
-      <input type="text" class="form-control" id="username" name="username" required>
-    </div>
-    <div class="mb-3">
-      <label for="password" class="form-label">Password</label>
-      <input type="password" class="form-control" id="password" name="password" required>
-    </div>
-    <button type="submit" class="btn btn-primary">Sign In</button>
-  </form>
-</div>
+<div class="eyebrow">private entrance</div>
+<h1 class="notice-title">At the side window</h1>
+<div class="rule-short"></div>
+
+<p class="lede" style="margin-bottom: 32px;">
+  For correspondents with a standing arrangement only.
+  Knock with the proper mark and private word.
+</p>
+
+<form class="notice" action="{{ '/sign-in-error.html' | relative_url }}" method="get" novalidate style="padding: 28px;">
+  <div class="field">
+    <label for="mark">Correspondent's mark</label>
+    <input id="mark" name="mark" type="text" autocomplete="off" placeholder="e.g. m. ashford" required>
+    <span class="hint">Lowercase, no spaces. As written on the inside flap of your last cover.</span>
+  </div>
+
+  <div class="field">
+    <label for="word">Private word</label>
+    <input id="word" name="word" type="password" autocomplete="current-password" placeholder="........" required>
+    <span class="hint">Issued at the counter, never sent in writing.</span>
+  </div>
+
+  <div class="d-flex justify-content-between align-items-center mt-4">
+    <a href="{{ '/access.html' | relative_url }}" style="font: var(--t-ledger); color: var(--ink-soft);">No arrangement? Apply →</a>
+    <button type="submit" class="btn sp-btn sp-btn-primary">Knock</button>
+  </div>
+  <p class="hint" style="margin-top: 12px;">
+    This side-window check is simulated. Marks and private words are not authenticated against a backend.
+  </p>
+</form>

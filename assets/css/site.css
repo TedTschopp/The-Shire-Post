@@ -1,0 +1,205 @@
+@import url("./colors_and_type.css");
+@import url("https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css");
+
+/* ----------------------------------------------------------------
+   The Shire Post — public site styles
+   Built on top of the design tokens. Bootstrap 5.3 utilities are
+   assumed available; we override base typography and a few classes.
+   ---------------------------------------------------------------- */
+
+html, body { background: var(--paper); color: var(--ink); }
+body { font: var(--t-body); min-height: 100vh; display: flex; flex-direction: column; }
+
+a { color: var(--link); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { text-decoration-thickness: 2px; color: var(--link-hover); }
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--wax);
+  outline-offset: 2px;
+}
+
+.shopfront-nav a:focus-visible,
+.btn.sp-btn:focus-visible {
+  box-shadow: 0 0 0 2px var(--paper), 0 0 0 4px var(--wax);
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--paper);
+  color: var(--ink);
+  border: 1px solid var(--ink);
+  padding: 8px 12px;
+  z-index: 1000;
+}
+.skip-link:focus {
+  left: 12px;
+  top: 12px;
+}
+
+/* ---- Masthead ---- */
+.masthead {
+  text-align: center;
+  padding: 28px 16px 22px;
+  border-bottom: 1px solid var(--ink);
+  background: var(--paper);
+  position: relative;
+}
+.masthead .meta {
+  position: absolute; left: 24px; right: 24px; top: 14px;
+  display: flex; justify-content: space-between;
+  font: var(--t-ledger); color: var(--ink-soft); font-size: 11px;
+  text-transform: uppercase; letter-spacing: var(--tracking-eyebrow);
+}
+.masthead .wordmark {
+  font: 400 clamp(38px, 6vw, 64px)/1.05 var(--font-display);
+  letter-spacing: 0.01em;
+  font-feature-settings: "liga","dlig";
+}
+.masthead .tagline {
+  font: var(--t-eyebrow); text-transform: uppercase; letter-spacing: var(--tracking-eyebrow);
+  color: var(--ink-soft); margin-top: 6px;
+}
+.masthead .ornament { font: 400 22px var(--font-display); color: var(--brass); margin: 4px 0 0; }
+
+/* ---- Top nav (a thin line of nav links under the masthead) ---- */
+.shopfront-nav {
+  border-bottom: var(--border-hair);
+  background: var(--paper);
+}
+.shopfront-nav ul {
+  list-style: none; padding: 0; margin: 0;
+  display: flex; justify-content: center; gap: 28px;
+  font: var(--t-eyebrow); text-transform: uppercase; letter-spacing: var(--tracking-eyebrow);
+}
+.shopfront-nav li a {
+  display: block; padding: 12px 0;
+  color: var(--ink-soft); text-decoration: none;
+  border-bottom: 2px solid transparent;
+}
+.shopfront-nav li a:hover { color: var(--ink); border-bottom-color: var(--ink); }
+.shopfront-nav li a.is-current { color: var(--ink); border-bottom-color: var(--ink); }
+
+/* ---- Page chrome ---- */
+.page {
+  flex: 1 0 auto;
+  width: min(var(--measure-page), 100% - 32px);
+  margin: 0 auto;
+  padding: 48px 0 64px;
+}
+.page.prose { width: min(var(--measure-prose), 100% - 32px); }
+
+.eyebrow { font: var(--t-eyebrow); text-transform: uppercase; letter-spacing: var(--tracking-eyebrow); color: var(--ink-soft); }
+h1, h2, h3 { letter-spacing: var(--tracking-tight); }
+h1.notice-title { font: var(--t-h1); margin: 6px 0 18px; }
+h2.notice-title { font: var(--t-h2); margin: 6px 0 14px; }
+.lede { font: var(--t-body-lg); color: var(--ink-soft); max-width: 60ch; }
+
+.rule-short { width: 48px; height: 0; border-top: 1px solid var(--ink); margin: 8px 0 22px; }
+
+/* ---- Buttons (override Bootstrap minimally) ---- */
+.btn.sp-btn {
+  font: 500 var(--fs-14)/1 var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  padding: 14px 22px;
+  border-radius: var(--radius-stamp);
+  border: 1px solid var(--ink);
+  transition: background var(--dur-200) var(--ease-settle), color var(--dur-200) var(--ease-settle);
+}
+.btn.sp-btn-primary { background: var(--wax); color: var(--paper); border-color: var(--wax); }
+.btn.sp-btn-primary:hover { background: var(--wax-deep); border-color: var(--wax-deep); color: var(--paper); }
+.btn.sp-btn-secondary { background: var(--paper); color: var(--ink); }
+.btn.sp-btn-secondary:hover { background: var(--ink); color: var(--paper); }
+.btn.sp-btn:active { transform: translateY(1px); }
+
+/* ---- Form fields ---- */
+.field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 18px; }
+.field label { font: var(--t-eyebrow); text-transform: uppercase; letter-spacing: var(--tracking-eyebrow); color: var(--ink-soft); }
+.field input, .field textarea, .field select {
+  font: var(--t-body); padding: 12px 14px;
+  background: var(--paper); color: var(--ink);
+  border: 1px solid var(--ink); border-radius: var(--radius-stamp);
+  width: 100%;
+  transition: box-shadow var(--dur-200) var(--ease-settle);
+}
+.field input::placeholder, .field textarea::placeholder { color: var(--ink-faint); font-style: italic; }
+.field input:focus, .field textarea:focus, .field select:focus { outline: none; box-shadow: 0 0 0 1px var(--wax); border-color: var(--wax); }
+.field .hint { font: var(--t-ledger); color: var(--ink-soft); }
+
+/* ---- Notice (the atomic content unit) ---- */
+.notice {
+  background: var(--paper);
+  border: var(--border-hair);
+  padding: 22px 24px;
+  margin-bottom: 18px;
+}
+.notice .head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; margin-bottom: 6px; }
+.notice h3 { font: var(--t-h3); margin: 0 0 6px; }
+.notice p { margin: 0; color: var(--ink-soft); }
+.notice .sig { font: var(--t-ledger); color: var(--ink-soft); margin-top: 18px; padding-top: 12px; border-top: var(--border-hair); }
+
+/* ---- Office-hours indicator ---- */
+.indicator { display: inline-flex; align-items: center; gap: 10px; padding: 6px 12px; border: var(--border-hair); }
+.indicator .dot { width: 9px; height: 9px; border-radius: 9999px; background: var(--hedge); box-shadow: 0 0 0 3px var(--hedge-soft); }
+.indicator .dot.closed { background: var(--ink-faint); box-shadow: 0 0 0 3px var(--paper-deep); }
+.indicator .lbl { font: var(--t-eyebrow); text-transform: uppercase; letter-spacing: var(--tracking-eyebrow); }
+
+/* ---- Ledger ---- */
+.ledger { width: 100%; border-collapse: collapse; font: var(--t-ledger); font-feature-settings: "tnum","zero"; }
+.ledger th, .ledger td { text-align: left; padding: 10px 12px; border-bottom: var(--border-hair); }
+.ledger thead th { background: var(--paper-deep); color: var(--ink-soft); text-transform: uppercase; letter-spacing: var(--tracking-eyebrow); font-size: 11px; }
+.ledger tbody tr:nth-child(even) td { background: color-mix(in oklab, var(--paper-deep), var(--paper) 60%); }
+
+/* ---- Image placeholder (no figurative artwork at design time) ---- */
+.plate {
+  background:
+    repeating-linear-gradient(135deg,
+      color-mix(in oklab, var(--paper-deep), var(--paper) 40%) 0,
+      color-mix(in oklab, var(--paper-deep), var(--paper) 40%) 8px,
+      var(--paper-deep) 8px, var(--paper-deep) 16px);
+  border: var(--border-hair);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--ink-soft); font: var(--t-ledger);
+  text-transform: uppercase; letter-spacing: var(--tracking-eyebrow);
+  text-align: center; padding: 24px;
+}
+
+/* ---- Sealmark placement (homepage hero) ---- */
+.hero {
+  display: grid; grid-template-columns: 1.4fr 1fr; gap: 48px; align-items: center;
+  padding: 24px 0 48px;
+}
+@media (max-width: 760px) { .hero { grid-template-columns: 1fr; gap: 24px; } }
+.hero .seal { display: flex; justify-content: center; }
+.hero .seal img { width: 220px; height: 220px; opacity: 0.92; }
+
+/* ---- Colophon ---- */
+.colophon {
+  flex-shrink: 0;
+  border-top: 1px solid var(--ink);
+  background: var(--paper-deep);
+  padding: 32px 24px 40px;
+  color: var(--ink-soft);
+}
+.colophon .grid {
+  width: min(var(--measure-page), 100% - 0px);
+  margin: 0 auto;
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px;
+}
+@media (max-width: 980px) { .colophon .grid { grid-template-columns: repeat(2, 1fr); gap: 20px; } }
+@media (max-width: 760px) { .colophon .grid { grid-template-columns: 1fr; gap: 18px; } }
+.colophon dt { font: var(--t-eyebrow); text-transform: uppercase; letter-spacing: var(--tracking-eyebrow); margin-bottom: 4px; }
+.colophon dd { font: var(--t-caption); margin: 0 0 2px; }
+.colophon .postmark { display: flex; justify-content: space-between; margin-top: 24px; padding-top: 18px; border-top: var(--border-hair); font: var(--t-ledger); font-size: 11px; text-transform: uppercase; letter-spacing: var(--tracking-eyebrow); }
+.colophon a[aria-current="page"] { color: var(--ink); text-decoration-thickness: 2px; }
+
+/* ---- Tear-off slip (private notice) ---- */
+.slip { border: 1px solid var(--ink); background: var(--paper); max-width: 520px; margin: 24px auto; }
+.slip .body { padding: 22px 24px; }
+.slip .stub { border-top: var(--border-dashed); padding: 14px 24px; display: flex; justify-content: space-between; align-items: center; font: var(--t-ledger); font-size: 11px; text-transform: uppercase; letter-spacing: var(--tracking-eyebrow); color: var(--ink-soft); }

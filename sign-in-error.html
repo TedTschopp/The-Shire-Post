@@ -1,10 +1,25 @@
 ---
-layout: default
-title: Sign In Error
+layout: page
+title: Mark Not Recognised
+nav: window
+permalink: /sign-in-error.html
 ---
 
-<div class="container my-5">
-  <h1>Sign In Error</h1>
-  <p>The username or password you entered is incorrect. Please try again.</p>
-  <a href="/sign-in" class="btn btn-secondary">Back to Sign In</a>
+<div class="slip" style="margin-top: 48px;">
+  <div class="body">
+    <div class="eyebrow" style="color: var(--wax);">slip returned</div>
+    <h2 class="notice-title" style="margin: 6px 0 8px;">The mark or private word is not recognised.</h2>
+    <p style="font: var(--t-body); color: var(--ink-soft); margin: 0 0 16px;">
+      The side window has been quietly closed.
+      Please knock again, or apply at the counter on a Tuesday or Friday.
+    </p>
+    <div class="d-flex flex-wrap gap-2">
+      <a href="{{ '/sign-in.html' | relative_url }}" class="btn sp-btn sp-btn-primary">Knock again</a>
+      <a href="{{ '/access.html' | relative_url }}" class="btn sp-btn sp-btn-secondary">Make application</a>
+    </div>
+  </div>
+  <div class="stub">
+    <span>tear here · keep this stub</span>
+    <span>042 · {{ "now" | date: "%-d-%m-%y" }}</span>
+  </div>
 </div>
