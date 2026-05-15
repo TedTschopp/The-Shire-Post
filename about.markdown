@@ -18,6 +18,6 @@ No private archive, account area, or document register is exposed on this public
 This website is independent and is not affiliated with any literary, film, game, or entertainment franchise.
 
 <figure class="photo-card photo-wide" style="margin-top: 28px;">
-	<img src="https://source.unsplash.com/1800x1000/?post-office,window" alt="A quiet post-office frontage in daylight." loading="lazy" decoding="async" referrerpolicy="no-referrer">
-	<figcaption>A quiet frontage: public door in front, working room behind.</figcaption>
+  <img src="https://images.unsplash.com/photo-1768225324882-9a4c116f3c7b?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=1800" alt="Exterior of a neighborhood post office with awning." loading="lazy" decoding="async" referrerpolicy="no-referrer">
+  <figcaption>A quiet frontage: public door in front, working room behind.</figcaption>
 </figure>
