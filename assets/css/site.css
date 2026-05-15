@@ -179,6 +179,43 @@ h2.notice-title { font: var(--t-h2); margin: 6px 0 14px; }
 .hero .seal { display: flex; justify-content: center; }
 .hero .seal img { width: 220px; height: 220px; opacity: 0.92; }
 
+/* ---- Photography plates (open-licence imagery only) ---- */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+@media (max-width: 980px) {
+  .photo-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 760px) {
+  .photo-grid { grid-template-columns: 1fr; }
+}
+
+.photo-card {
+  margin: 0;
+  border: var(--border-hair);
+  background: var(--paper);
+}
+
+.photo-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-bottom: var(--border-hair);
+}
+
+.photo-card figcaption {
+  font: var(--t-caption);
+  color: var(--ink-soft);
+  padding: 10px 12px;
+}
+
+.photo-wide img {
+  aspect-ratio: 16 / 7;
+}
+
 /* ---- Colophon ---- */
 .colophon {
   flex-shrink: 0;

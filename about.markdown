@@ -16,3 +16,8 @@ Most correspondence remains behind the counter.
 No private archive, account area, or document register is exposed on this public site.
 
 This website is independent and is not affiliated with any literary, film, game, or entertainment franchise.
+
+<figure class="photo-card photo-wide" style="margin-top: 28px;">
+	<img src="https://source.unsplash.com/1800x1000/?post-office,window" alt="A quiet post-office frontage in daylight." loading="lazy" decoding="async" referrerpolicy="no-referrer">
+	<figcaption>A quiet frontage: public door in front, working room behind.</figcaption>
+</figure>

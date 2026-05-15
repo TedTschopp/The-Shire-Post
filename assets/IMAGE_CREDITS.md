@@ -5,7 +5,10 @@ When a real photograph is introduced, record it here with filename, author, sour
 
 | File | Author | Source | Licence |
 |---|---|---|---|
-| Placeholder slots currently in use | — | — | — |
+| Home plate 1 (country lane, hedgerow) | Unsplash contributors | https://source.unsplash.com/1600x1200/?country-lane,hedgerow | Unsplash Licence |
+| Home plate 2 (post box, mail) | Unsplash contributors | https://source.unsplash.com/1600x1200/?postbox,mail | Unsplash Licence |
+| Home plate 3 (letter, wax seal) | Unsplash contributors | https://source.unsplash.com/1600x1200/?letter,wax-seal | Unsplash Licence |
+| About plate (post office frontage) | Unsplash contributors | https://source.unsplash.com/1800x1000/?post-office,window | Unsplash Licence |
 
 ## Suggested sources
 
