@@ -1,0 +1,95 @@
+{% assign source_date = include.date | default: "now" %}
+{% assign g_year = source_date | date: "%Y" | plus: 0 %}
+{% assign age_year = g_year | minus: 1945 %}
+{% assign day_of_year = source_date | date: "%j" | plus: 0 %}
+
+{% assign leap = false %}
+{% if g_year | modulo: 400 == 0 %}
+	{% assign leap = true %}
+{% elsif g_year | modulo: 100 == 0 %}
+	{% assign leap = false %}
+{% elsif g_year | modulo: 4 == 0 %}
+	{% assign leap = true %}
+{% endif %}
+
+{% assign shire_month = "" %}
+{% assign shire_day = 0 %}
+{% assign shire_festival = "" %}
+
+{% if day_of_year == 1 %}
+	{% assign shire_festival = "2 Yule" %}
+{% elsif day_of_year <= 31 %}
+	{% assign shire_month = "Afteryule" %}
+	{% assign shire_day = day_of_year | minus: 1 %}
+{% elsif day_of_year <= 61 %}
+	{% assign shire_month = "Solmath" %}
+	{% assign shire_day = day_of_year | minus: 31 %}
+{% elsif day_of_year <= 91 %}
+	{% assign shire_month = "Rethe" %}
+	{% assign shire_day = day_of_year | minus: 61 %}
+{% elsif day_of_year <= 121 %}
+	{% assign shire_month = "Astron" %}
+	{% assign shire_day = day_of_year | minus: 91 %}
+{% elsif day_of_year <= 151 %}
+	{% assign shire_month = "Thrimidge" %}
+	{% assign shire_day = day_of_year | minus: 121 %}
+{% elsif day_of_year <= 181 %}
+	{% assign shire_month = "Forelithe" %}
+	{% assign shire_day = day_of_year | minus: 151 %}
+{% elsif day_of_year == 182 %}
+	{% assign shire_festival = "1 Lithe" %}
+{% elsif day_of_year == 183 %}
+	{% assign shire_festival = "Midyear's Day" %}
+{% elsif leap and day_of_year == 184 %}
+	{% assign shire_festival = "Overlithe" %}
+{% elsif leap and day_of_year == 185 %}
+	{% assign shire_festival = "2 Lithe" %}
+{% elsif leap and day_of_year <= 215 %}
+	{% assign shire_month = "Afterlithe" %}
+	{% assign shire_day = day_of_year | minus: 185 %}
+{% elsif leap and day_of_year <= 245 %}
+	{% assign shire_month = "Wedmath" %}
+	{% assign shire_day = day_of_year | minus: 215 %}
+{% elsif leap and day_of_year <= 275 %}
+	{% assign shire_month = "Halimath" %}
+	{% assign shire_day = day_of_year | minus: 245 %}
+{% elsif leap and day_of_year <= 305 %}
+	{% assign shire_month = "Winterfilth" %}
+	{% assign shire_day = day_of_year | minus: 275 %}
+{% elsif leap and day_of_year <= 335 %}
+	{% assign shire_month = "Blotmath" %}
+	{% assign shire_day = day_of_year | minus: 305 %}
+{% elsif leap and day_of_year <= 365 %}
+	{% assign shire_month = "Foreyule" %}
+	{% assign shire_day = day_of_year | minus: 335 %}
+{% elsif leap and day_of_year == 366 %}
+	{% assign shire_festival = "1 Yule" %}
+{% elsif day_of_year == 184 %}
+	{% assign shire_festival = "2 Lithe" %}
+{% elsif day_of_year <= 214 %}
+	{% assign shire_month = "Afterlithe" %}
+	{% assign shire_day = day_of_year | minus: 184 %}
+{% elsif day_of_year <= 244 %}
+	{% assign shire_month = "Wedmath" %}
+	{% assign shire_day = day_of_year | minus: 214 %}
+{% elsif day_of_year <= 274 %}
+	{% assign shire_month = "Halimath" %}
+	{% assign shire_day = day_of_year | minus: 244 %}
+{% elsif day_of_year <= 304 %}
+	{% assign shire_month = "Winterfilth" %}
+	{% assign shire_day = day_of_year | minus: 274 %}
+{% elsif day_of_year <= 334 %}
+	{% assign shire_month = "Blotmath" %}
+	{% assign shire_day = day_of_year | minus: 304 %}
+{% elsif day_of_year <= 364 %}
+	{% assign shire_month = "Foreyule" %}
+	{% assign shire_day = day_of_year | minus: 334 %}
+{% else %}
+	{% assign shire_festival = "1 Yule" %}
+{% endif %}
+
+{% if shire_festival != "" %}
+	{{ shire_festival }} · 7A {{ age_year }}
+{% else %}
+	{{ shire_day }} {{ shire_month }} · 7A {{ age_year }}
+{% endif %}

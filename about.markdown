@@ -15,6 +15,8 @@ The public rooms present notices, office hours, and routes for application.
 Most correspondence remains behind the counter.
 No private archive, account area, or document register is exposed on this public site.
 
+For dates and scheduling language used at the desk, see the [Calendar Reckoning](/calendar/).
+
 This website is independent and is not affiliated with any literary, film, game, or entertainment franchise.
 
 <figure class="photo-card photo-wide" style="margin-top: 28px;">
