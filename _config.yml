@@ -20,7 +20,7 @@
 
 title: The Shire Post
 email:
-url: https://tedtschopp.github.io/The-Shire-Post
+url: https://theshirepost.org
 baseurl: ""
 description: >
   A quiet house of correspondence for invited readers, private notices, and well-kept archives.
@@ -34,7 +34,7 @@ plugins:
 
 # GitHub Pages settings
 github:
-  is_project_page: true
+  is_project_page: false
 
 # Exclude unnecessary files from the build
 exclude:

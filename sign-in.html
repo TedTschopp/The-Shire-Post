@@ -14,7 +14,7 @@ permalink: /sign-in.html
   Knock with the proper mark and private word.
 </p>
 
-<form class="notice" action="{{ '/sign-in-error.html' | relative_url }}" method="get" novalidate style="padding: 28px;">
+<form class="notice" action="/sign-in-error.html" method="get" novalidate style="padding: 28px;">
   <div class="field">
     <label for="mark">Correspondent's mark</label>
     <input id="mark" name="mark" type="text" autocomplete="off" placeholder="e.g. m. ashford" required>
@@ -28,7 +28,7 @@ permalink: /sign-in.html
   </div>
 
   <div class="d-flex justify-content-between align-items-center mt-4">
-    <a href="{{ '/access.html' | relative_url }}" style="font: var(--t-ledger); color: var(--ink-soft);">No arrangement? Apply →</a>
+    <a href="/access.html" style="font: var(--t-ledger); color: var(--ink-soft);">No arrangement? Apply →</a>
     <button type="submit" class="btn sp-btn sp-btn-primary">Knock</button>
   </div>
   <p class="hint" style="margin-top: 12px;">
