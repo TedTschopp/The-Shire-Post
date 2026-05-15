@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>The Shire Post</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="site.css">
+  <script>
+    // Suppress the harmless "ResizeObserver loop" notice the host iframe emits.
+    (function () {
+      var origError = console.error;
+      console.error = function () {
+        if (arguments[0] && String(arguments[0]).indexOf("ResizeObserver loop") !== -1) return;
+        return origError.apply(console, arguments);
+      };
+      window.addEventListener("error", function (e) {
+        if (e && e.message && e.message.indexOf("ResizeObserver loop") !== -1) {
+          e.stopImmediatePropagation();
+          e.preventDefault();
+        }
+      }, true);
+    })();
+  </script>
+</head>
+<body>
+
+<!-- ---------- Masthead ---------- -->
+<header class="masthead">
+  <div class="meta">
+    <span>Vol. xii · No. 042</span>
+    <span>Tuesday, 12th of March, 2026</span>
+  </div>
+  <div class="wordmark">The Shire Post</div>
+  <div class="ornament">❦</div>
+  <div class="tagline">By hand &amp; by foot · since the counter was first opened</div>
+</header>
+
+<!-- ---------- Shopfront nav ---------- -->
+<nav class="shopfront-nav">
+  <ul>
+    <li><a href="index.html" class="is-current">The Counter</a></li>
+    <li><a href="apply.html">Post a Letter</a></li>
+    <li><a href="apply.html">Make Application</a></li>
+    <li><a href="side-window.html">Side Window</a></li>
+    <li><a href="not-found.html">Pigeonholes</a></li>
+  </ul>
+</nav>
+
+<!-- ---------- Page ---------- -->
+<main class="page">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div>
+      <div class="eyebrow">section i · welcome</div>
+      <h1 class="notice-title">The counter is open on Tuesdays and Fridays.</h1>
+      <div class="rule-short"></div>
+      <p class="lede">
+        The Shire Post is a quiet correspondence house: a place where letters are
+        franked, parcels are held for collection, and the day's notices are pinned
+        beside the door. Most of what we do is for the addressee's eyes only.
+        These pages are the front of the office &mdash; what a visitor would see
+        on stepping inside.
+      </p>
+      <div class="d-flex flex-wrap gap-2 mt-4">
+        <a href="apply.html" class="btn sp-btn sp-btn-primary">Post a letter</a>
+        <a href="side-window.html" class="btn sp-btn sp-btn-secondary">Apply at the side window</a>
+      </div>
+      <div class="mt-4">
+        <span class="indicator">
+          <span class="dot"></span>
+          <span class="lbl">Counter open</span>
+          <span style="font:var(--t-ledger); color:var(--ink-soft);">until 17:00</span>
+        </span>
+      </div>
+    </div>
+    <div class="seal" aria-hidden="true">
+      <img src="../../assets/sealmark.svg" alt="">
+    </div>
+  </section>
+
+  <!-- Notices -->
+  <section style="margin-top: 32px;">
+    <div class="eyebrow">section ii · notices to correspondents</div>
+    <h2 class="notice-title">Pinned by the door</h2>
+    <div class="rule-short"></div>
+
+    <article class="notice">
+      <div class="head">
+        <span class="eyebrow">notice no. 042 · posted 12 march</span>
+        <span class="eyebrow">by the clerk on duty</span>
+      </div>
+      <h3>Held for collection</h3>
+      <p>A small number of parcels remain in pigeonhole 14 and may be claimed by their addressees on production of the proper mark. Items unclaimed by Lady-day will be returned to sender.</p>
+    </article>
+
+    <article class="notice">
+      <div class="head">
+        <span class="eyebrow">notice no. 041 · posted 10 march</span>
+        <span class="eyebrow">overseas dispatch</span>
+      </div>
+      <h3>A pause in foreign parcels</h3>
+      <p>The Post does not at present accept overseas parcels exceeding two pounds in weight. Letters of any weight continue to be franked as usual. We regret the inconvenience and expect to resume the full service after the spring.</p>
+    </article>
+
+    <article class="notice">
+      <div class="head">
+        <span class="eyebrow">notice no. 040 · posted 03 march</span>
+        <span class="eyebrow">private correspondence</span>
+      </div>
+      <h3>A private door</h3>
+      <p>Beyond this counter lies the working office. Correspondents with standing arrangements may <a href="side-window.html">apply at the side window</a> on production of their mark and private word. The Post does not at present accept new standing arrangements.</p>
+    </article>
+  </section>
+
+  <!-- Hours table -->
+  <section style="margin-top: 48px;">
+    <div class="eyebrow">section iii · office hours</div>
+    <h2 class="notice-title">When the counter is staffed</h2>
+    <div class="rule-short"></div>
+    <table class="ledger" style="max-width:640px;">
+      <thead>
+        <tr><th>Day</th><th>Counter</th><th>Last dispatch</th><th>Status</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Monday</td><td>—</td><td>—</td><td>Closed</td></tr>
+        <tr><td>Tuesday</td><td>09:00 — 17:00</td><td>16:30</td><td>Open</td></tr>
+        <tr><td>Wednesday</td><td>—</td><td>—</td><td>Closed</td></tr>
+        <tr><td>Thursday</td><td>—</td><td>—</td><td>Closed</td></tr>
+        <tr><td>Friday</td><td>09:00 — 18:00</td><td>17:30</td><td>Open</td></tr>
+        <tr><td>Saturday</td><td>10:00 — 12:00</td><td>11:30</td><td>By appointment</td></tr>
+        <tr><td>Sunday</td><td>—</td><td>—</td><td>Closed</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+</main>
+
+<!-- ---------- Colophon ---------- -->
+<footer class="colophon">
+  <div class="grid">
+    <dl>
+      <dt>The Office</dt>
+      <dd>The Counter,</dd>
+      <dd>Hollow Lane,</dd>
+      <dd>by the milestone.</dd>
+    </dl>
+    <dl>
+      <dt>Hours</dt>
+      <dd>Tuesdays 09:00 &mdash; 17:00</dd>
+      <dd>Fridays 09:00 &mdash; 18:00</dd>
+      <dd>Saturdays by appointment</dd>
+    </dl>
+    <dl>
+      <dt>Correspondence</dt>
+      <dd><a href="apply.html">Post a letter</a></dd>
+      <dd><a href="side-window.html">Side window</a></dd>
+      <dd><a href="not-found.html">Pigeonholes</a></dd>
+    </dl>
+  </div>
+  <div class="grid">
+    <div class="postmark" style="grid-column: 1 / -1;">
+      <span>The Shire Post · est. at the counter</span>
+      <span>posted · 12 · iii · 26</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

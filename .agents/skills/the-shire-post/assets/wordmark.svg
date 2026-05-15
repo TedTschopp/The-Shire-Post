@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 80" role="img" aria-label="The Shire Post">
+  
+  <line x1="20" y1="14" x2="400" y2="14" class="rule"></line>
+  <text x="210" y="50" text-anchor="middle" class="wm">The Shire Post</text>
+  <line x1="20" y1="64" x2="400" y2="64" class="rule"></line>
+  <text x="210" y="76" text-anchor="middle" class="tag">EST. AT THE COUNTER · OPEN TUES &amp; FRI</text>
+</svg>

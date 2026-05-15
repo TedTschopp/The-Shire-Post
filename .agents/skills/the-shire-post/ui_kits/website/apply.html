@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Make application — The Shire Post</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+
+<header class="masthead">
+  <div class="meta"><span>Vol. xii · No. 042</span><span>Tuesday, 12th of March, 2026</span></div>
+  <div class="wordmark">The Shire Post</div>
+  <div class="ornament">❦</div>
+  <div class="tagline">By hand &amp; by foot · since the counter was first opened</div>
+</header>
+
+<nav class="shopfront-nav">
+  <ul>
+    <li><a href="index.html">The Counter</a></li>
+    <li><a href="apply.html" class="is-current">Post a Letter</a></li>
+    <li><a href="apply.html">Make Application</a></li>
+    <li><a href="side-window.html">Side Window</a></li>
+    <li><a href="not-found.html">Pigeonholes</a></li>
+  </ul>
+</nav>
+
+<main class="page prose">
+  <div class="eyebrow">application no. 043</div>
+  <h1 class="notice-title">Make application for a standing arrangement</h1>
+  <div class="rule-short"></div>
+
+  <p class="lede" style="margin-bottom: 28px;">
+    Standing arrangements are not currently being granted. The Post will keep
+    this application on file. There is no fee, and no obligation on either side.
+  </p>
+
+  <form class="notice" action="not-found.html" method="get" novalidate>
+    <div class="field">
+      <label for="name">Your name</label>
+      <input id="name" name="name" type="text" placeholder="As you wish to be addressed">
+    </div>
+
+    <div class="field">
+      <label for="reachable">Where you may be reached</label>
+      <input id="reachable" name="reachable" type="text" placeholder="A postal address, or none at all">
+      <span class="hint">A street address, a parish, or "via the counter" — whatever suits you.</span>
+    </div>
+
+    <div class="field">
+      <label for="purpose">The purpose of your correspondence</label>
+      <textarea id="purpose" name="purpose" rows="5" placeholder="A short note, in your own words."></textarea>
+    </div>
+
+    <div class="field">
+      <label for="introduction">Have you been spoken for?</label>
+      <select id="introduction" name="introduction">
+        <option>I have not</option>
+        <option>By a correspondent in good standing</option>
+        <option>At the counter, in person</option>
+        <option>By prior letter</option>
+      </select>
+    </div>
+
+    <div class="d-flex justify-content-between align-items-center mt-4">
+      <a href="index.html" style="font: var(--t-ledger); color: var(--ink-soft);">← Back to the counter</a>
+      <button type="submit" class="btn sp-btn sp-btn-primary">Post the application</button>
+    </div>
+  </form>
+
+  <p style="margin-top: 28px; font: var(--t-caption); color: var(--ink-soft);">
+    Applications are read at the close of business on Friday. The Post does not
+    acknowledge applications by return. If you are admitted, a private word will
+    reach you by the usual hand.
+  </p>
+</main>
+
+<footer class="colophon">
+  <div class="grid">
+    <dl><dt>The Office</dt><dd>The Counter,</dd><dd>Hollow Lane,</dd><dd>by the milestone.</dd></dl>
+    <dl><dt>Hours</dt><dd>Tuesdays 09:00 &mdash; 17:00</dd><dd>Fridays 09:00 &mdash; 18:00</dd><dd>Saturdays by appointment</dd></dl>
+    <dl><dt>Correspondence</dt><dd><a href="apply.html">Post a letter</a></dd><dd><a href="side-window.html">Side window</a></dd><dd><a href="not-found.html">Pigeonholes</a></dd></dl>
+  </div>
+  <div class="grid"><div class="postmark" style="grid-column: 1 / -1;"><span>The Shire Post · est. at the counter</span><span>posted · 12 · iii · 26</span></div></div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Buttons</title><link rel="stylesheet" href="_card.css">
+<style>
+  .btn {
+    font: 500 var(--fs-14)/1 var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    padding: 14px 22px;
+    border-radius: var(--radius-stamp);
+    border: 1px solid var(--ink);
+    cursor: pointer;
+    transition: background var(--dur-200) var(--ease-settle), color var(--dur-200) var(--ease-settle);
+  }
+  .btn-primary { background: var(--wax); color: var(--paper); border-color: var(--wax); }
+  .btn-primary:hover { background: var(--wax-deep); border-color: var(--wax-deep); }
+  .btn-secondary { background: var(--paper); color: var(--ink); border-color: var(--ink); }
+  .btn-secondary:hover { background: var(--ink); color: var(--paper); }
+  .btn-quiet { background: transparent; color: var(--ink); border-color: transparent; padding-left: 0; padding-right: 0; }
+  .btn-quiet:hover { color: var(--wax); }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="row" style="gap:14px; align-items:center;">
+    <button class="btn btn-primary">Post a letter</button>
+    <button class="btn btn-secondary">Apply at the side window</button>
+    <button class="btn btn-quiet">Cancel</button>
+  </div>
+  <div class="mono muted">Mono small-caps · 2px corners · wax fill = primary, ink outline = secondary. No icons.</div>
+</div>
+</body></html>

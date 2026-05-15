@@ -1,0 +1,18 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Links</title><link rel="stylesheet" href="_card.css">
+<style>
+  a.lk { color: var(--ink); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  a.lk:hover { text-decoration-thickness: 2px; color: var(--wax); }
+  .pair { display:flex; gap:18px; align-items:baseline; }
+  .pair .label { width:130px; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="pair"><span class="mono label">default</span><a class="lk" href="#">Apply at the side window</a></div>
+  <div class="pair"><span class="mono label">hover (sim.)</span><a class="lk" href="#" style="text-decoration-thickness:2px; color:var(--wax);">Apply at the side window</a></div>
+  <div class="pair"><span class="mono label">in prose</span>
+    <span style="font:var(--t-body);">Letters posted by <a class="lk" href="#">close of business on Friday</a> will be franked the same evening.</span>
+  </div>
+  <div class="mono muted">Underline always present. Thickens to 2px on hover and shifts to wax.</div>
+</div>
+</body></html>

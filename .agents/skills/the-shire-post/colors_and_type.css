@@ -1,0 +1,211 @@
+/* =========================================================================
+   The Shire Post — design tokens
+   Source of truth for colour, type, spacing, radii, shadows, motion.
+   Import this in any page before component CSS.
+   ========================================================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap");
+
+:root {
+  /* ------------------------------------------------------------------ */
+  /* Colour — paper, ink, wax, hedge, brass                              */
+  /* ------------------------------------------------------------------ */
+
+  /* Surfaces */
+  --paper:        oklch(0.965 0.013 82);   /* primary background — cream stock */
+  --paper-deep:   oklch(0.930 0.018 80);   /* sidebars, cards, table headers   */
+  --paper-edge:   oklch(0.880 0.022 78);   /* borders, hairlines               */
+  --paper-shade:  oklch(0.820 0.025 76);   /* deeper rules, ledger banding     */
+
+  /* Ink — warm blue-black, never pure */
+  --ink:          oklch(0.220 0.020 255);  /* primary text                     */
+  --ink-soft:     oklch(0.400 0.018 255);  /* secondary text                   */
+  --ink-faint:    oklch(0.580 0.014 255);  /* placeholder, disabled            */
+  --ink-paper:    oklch(0.965 0.013 82);   /* text on dark surfaces (=paper)   */
+
+  /* Wax — sealing-wax red, the single saturated colour */
+  --wax:          oklch(0.430 0.130 28);   /* seals, masthead rule, primary    */
+  --wax-deep:     oklch(0.340 0.110 28);   /* hover/pressed on wax             */
+  --wax-soft:     oklch(0.880 0.040 28);   /* very light wash, error fields    */
+
+  /* Hedge — muted field green, used sparingly */
+  --hedge:        oklch(0.460 0.060 145);  /* "office open" indicator, ticks   */
+  --hedge-soft:   oklch(0.900 0.025 145);  /* "office open" bg wash            */
+
+  /* Brass — aged metal, very rare ornament */
+  --brass:        oklch(0.680 0.080 82);   /* scroll dividers, fleurons        */
+
+  /* Semantic */
+  --bg:                    var(--paper);
+  --bg-deep:               var(--paper-deep);
+  --fg:                    var(--ink);
+  --fg-soft:               var(--ink-soft);
+  --fg-faint:              var(--ink-faint);
+  --border:                var(--paper-edge);
+  --border-strong:         var(--ink);
+  --link:                  var(--ink);
+  --link-hover:            var(--wax);
+  --accent:                var(--wax);
+  --accent-hover:          var(--wax-deep);
+  --positive:              var(--hedge);
+  --critical:              var(--wax);
+  --critical-bg:           var(--wax-soft);
+
+  /* ------------------------------------------------------------------ */
+  /* Type                                                                */
+  /* ------------------------------------------------------------------ */
+
+  --font-display: "IM Fell English", "Cormorant Garamond", Georgia, serif;
+  --font-display-sc: "IM Fell English SC", "IM Fell English", Georgia, serif;
+  --font-body:    "Lora", Georgia, "Times New Roman", serif;
+  --font-mono:    "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  /* Scale (px) */
+  --fs-12: 0.75rem;     /* 12 */
+  --fs-13: 0.8125rem;   /* 13 */
+  --fs-14: 0.875rem;    /* 14 */
+  --fs-16: 1rem;        /* 16 — base */
+  --fs-18: 1.125rem;    /* 18 */
+  --fs-22: 1.375rem;    /* 22 */
+  --fs-28: 1.75rem;     /* 28 */
+  --fs-36: 2.25rem;     /* 36 */
+  --fs-48: 3rem;        /* 48 */
+  --fs-64: 4rem;        /* 64 */
+
+  /* Line heights */
+  --lh-display: 1.15;
+  --lh-tight:   1.25;
+  --lh-body:    1.55;
+  --lh-mono:    1.45;
+
+  /* Letter spacing */
+  --tracking-eyebrow: 0.16em;     /* mono small-caps eyebrow */
+  --tracking-tight:   -0.005em;
+  --tracking-normal:  0;
+
+  /* Semantic type roles */
+  --t-masthead: 400 var(--fs-48) / var(--lh-display) var(--font-display);
+  --t-h1:       400 var(--fs-36) / var(--lh-display) var(--font-display);
+  --t-h2:       400 var(--fs-28) / var(--lh-display) var(--font-display);
+  --t-h3:       400 var(--fs-22) / var(--lh-tight)   var(--font-display);
+  --t-h4:       500 var(--fs-18) / var(--lh-tight)   var(--font-body);
+  --t-body:     400 var(--fs-16) / var(--lh-body)    var(--font-body);
+  --t-body-lg:  400 var(--fs-18) / var(--lh-body)    var(--font-body);
+  --t-caption:  400 var(--fs-14) / var(--lh-body)    var(--font-body);
+  --t-eyebrow:  500 var(--fs-12) / var(--lh-body)    var(--font-mono);
+  --t-ledger:   400 var(--fs-13) / var(--lh-mono)    var(--font-mono);
+
+  /* ------------------------------------------------------------------ */
+  /* Spacing — 8-pt scale                                                */
+  /* ------------------------------------------------------------------ */
+  --s-2:   2px;
+  --s-4:   4px;
+  --s-8:   8px;
+  --s-12: 12px;
+  --s-16: 16px;
+  --s-24: 24px;
+  --s-32: 32px;
+  --s-48: 48px;
+  --s-64: 64px;
+  --s-96: 96px;
+  --s-128: 128px;
+
+  /* Layout */
+  --measure-prose: 720px;
+  --measure-page:  1040px;
+  --measure-wide:  1280px;
+
+  /* ------------------------------------------------------------------ */
+  /* Radii — almost zero by intention                                    */
+  /* ------------------------------------------------------------------ */
+  --radius-0:     0px;
+  --radius-stamp: 2px;     /* inputs, primary buttons — barely there  */
+  --radius-full:  9999px;  /* circular seals only                      */
+
+  /* ------------------------------------------------------------------ */
+  /* Borders                                                             */
+  /* ------------------------------------------------------------------ */
+  --border-hair:    1px solid var(--paper-edge);
+  --border-rule:    1px solid var(--ink);
+  --border-dashed:  1px dashed var(--ink-faint);   /* tear-off slip edge */
+  --border-double:  3px double var(--ink);          /* ceremonial divider */
+
+  /* ------------------------------------------------------------------ */
+  /* Shadows — almost none                                               */
+  /* ------------------------------------------------------------------ */
+  --shadow-none:  none;
+  --shadow-card:  0 1px 0 var(--paper-edge),
+                  0 8px 24px -16px rgba(34, 30, 28, 0.18);
+  --shadow-stamp: 0 0 0 1px var(--paper-edge),
+                  0 1px 0 var(--paper-shade);
+
+  /* ------------------------------------------------------------------ */
+  /* Motion                                                              */
+  /* ------------------------------------------------------------------ */
+  --ease-settle: cubic-bezier(0.2, 0, 0, 1);
+  --dur-100: 100ms;
+  --dur-200: 200ms;
+  --dur-400: 400ms;
+}
+
+/* ------------------------------------------------------------------ */
+/* Base elements                                                       */
+/* ------------------------------------------------------------------ */
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font: var(--t-body);
+  font-feature-settings: "liga", "dlig", "onum";
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 { margin: 0; letter-spacing: var(--tracking-tight); }
+h1 { font: var(--t-h1); }
+h2 { font: var(--t-h2); }
+h3 { font: var(--t-h3); }
+h4 { font: var(--t-h4); margin: 0; }
+
+p { margin: 0 0 1em 0; }
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: text-decoration-thickness var(--dur-200) var(--ease-settle),
+              color var(--dur-200) var(--ease-settle);
+}
+a:hover { text-decoration-thickness: 2px; color: var(--link-hover); }
+
+hr {
+  border: 0;
+  border-top: var(--border-hair);
+  margin: var(--s-24) 0;
+}
+
+code, kbd, samp, pre {
+  font: var(--t-ledger);
+  font-feature-settings: "tnum", "zero";
+}
+
+/* The eyebrow — small-caps mono label above headings */
+.eyebrow {
+  display: inline-block;
+  font: var(--t-eyebrow);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-eyebrow);
+  color: var(--ink-soft);
+}
+
+/* The masthead wordmark */
+.masthead-wordmark {
+  font: var(--t-masthead);
+  letter-spacing: 0.01em;
+  text-align: center;
+  font-feature-settings: "liga", "dlig";
+}

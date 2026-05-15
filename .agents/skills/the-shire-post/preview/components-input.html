@@ -1,0 +1,35 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Form input</title><link rel="stylesheet" href="_card.css">
+<style>
+  label.field { display:flex; flex-direction:column; gap:6px; }
+  label.field .lab { font: var(--t-eyebrow); text-transform:uppercase; letter-spacing:var(--tracking-eyebrow); color:var(--ink-soft); }
+  label.field input {
+    font: var(--t-body);
+    padding: 12px 14px;
+    background: var(--paper);
+    border: 1px solid var(--ink);
+    border-radius: var(--radius-stamp);
+    color: var(--ink);
+    outline: none;
+    transition: border-color var(--dur-200) var(--ease-settle), box-shadow var(--dur-200) var(--ease-settle);
+  }
+  label.field input::placeholder { color: var(--ink-faint); font-style: italic; }
+  label.field input:focus { border-color: var(--wax); box-shadow: 0 0 0 1px var(--wax); }
+  .hint { font: var(--t-ledger); color: var(--ink-soft); }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="row" style="gap:14px;">
+    <label class="field" style="flex:1; min-width:220px;">
+      <span class="lab">Correspondent's mark</span>
+      <input type="text" placeholder="e.g. m. ashford"/>
+      <span class="hint">Lowercase, no spaces.</span>
+    </label>
+    <label class="field" style="flex:1; min-width:220px;">
+      <span class="lab">Private word</span>
+      <input type="password" value="••••••••"/>
+      <span class="hint">As issued at the counter.</span>
+    </label>
+  </div>
+</div>
+</body></html>

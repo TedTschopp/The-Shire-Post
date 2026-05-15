@@ -1,0 +1,484 @@
+# Product Requirements Document: The Shire Post
+
+**Product name:** The Shire Post
+**Domain:** theshirepost.org
+**Version:** 0.1
+**Date:** May 15, 2026
+**Primary owner:** Ted
+**Product type:** Public landing website with simulated private functionality
+
+## 1. Product Summary
+
+**The Shire Post** will be an evergreen, tasteful, well-maintained website built using **Liquid templates** and the **Jekyll static site generator**, styled with **Bootstrap 5.3.x**. The site will give visitors the impression of an active private correspondence house, archive, or postal office. The public site should feel intentional and complete, not like a placeholder, but it should reveal no private content.
+
+The site will simulate private functionality, such as login screens and access request forms, without implementing any backend or authentication systems. For example, a login form will accept input and redirect users to a page that informs them of an incorrect username or password, without actually processing credentials.
+
+The brand may evoke the feeling of a quiet rural village post, old letters, hedgerows, field paths, wax seals, hand-stamped notices, ledgers, and private correspondence. It should **not** present itself as a Tolkien, Hobbit, Lord of the Rings, Middle-earth, or fantasy franchise website.
+
+The safest creative direction is **rural postal service, old village mailroom, and private correspondence**, rather than direct adaptation of Tolkien’s world. “Shire” is a general English word meaning an administrative subdivision or county, but the site should avoid using the term in ways that imply affiliation with, adaptation of, or derivation from Tolkien’s fictional setting. ([Merriam-Webster][1])
+
+## 2. Legal and Brand Safety Assumptions
+
+This PRD is not legal advice. The implementation should be reviewed by counsel before launch if the site will become commercial, public-facing at scale, or associated with merchandise, publishing, games, events, newsletters, or memberships.
+
+The brand must avoid creating a likelihood of confusion with existing Tolkien-related marks or licensed works. The USPTO describes likelihood of confusion as a situation where consumers may mistakenly believe goods or services come from the same source because marks are similar and goods/services are related. ([USPTO][2]) Middle-earth Enterprises states that it owns exclusive worldwide rights to motion picture, merchandising, stage, and other rights in certain Tolkien literary works including *The Lord of the Rings* and *The Hobbit*. ([Middle-earth][3]) The Tolkien Estate also states that Tolkien’s original drawings, maps, designs, scripts, and other graphic works are protected and may not be copied. ([The Tolkien Estate][4])
+
+**Brand-safe rule:** The site may be inspired by the generic concepts of a shire, village, countryside, and post office. It must not copy Tolkien-specific names, places, characters, maps, art, symbols, quotes, storylines, or visual signatures.
+
+## 3. Goals
+
+The website should:
+
+1. Make theshirepost.org look polished, intentional, and maintained.
+2. Communicate that something real exists behind the public wall.
+3. Simulate private functionality, such as login forms and access requests, without implementing backend systems.
+4. Use an original, cozy, postal-rural identity.
+5. Avoid direct Tolkien/Hobbit/Lord of the Rings references.
+6. Be low-maintenance and evergreen.
+7. Be accessible, fast, secure, and simple to operate.
+8. Be implemented using **Liquid templates** and **Jekyll**, styled with **Bootstrap 5.3.x**.
+9. Use only **open-source images** and **open-source icons**.
+
+## 4. Non-Goals
+
+The website should not:
+
+1. Be a Tolkien fan site, wiki, parody site, fiction archive, or lore database.
+2. Use names such as Hobbit, Lord of the Rings, Middle-earth, Bag End, Baggins, Mordor, Gandalf, Frodo, Rivendell, etc.
+3. Use Tolkien quotes, maps, runes, ring inscriptions, character likenesses, or recognizable franchise iconography.
+4. Implement any backend functionality, such as authentication, authorization, or data storage.
+5. Depend on a public blog that can become stale.
+6. Rely on `robots.txt` as a privacy mechanism. Google’s own guidance says `robots.txt` is not a mechanism for keeping a page out of Google; sensitive pages should be protected with `noindex` or password protection. ([Google for Developers][5])
+
+## 5. Target Users
+
+### Public visitor
+
+A person who lands on theshirepost.org with no prior context. They should understand that the site is private, tasteful, and invitation-based.
+
+### Simulated invited recipient
+
+A person who interacts with simulated private functionality, such as login forms or access requests. They should experience the appearance of private access without any actual backend processing.
+
+### Site owner/admin
+
+Ted or another approved administrator. They need simple controls, secure access, and minimal maintenance burden.
+
+### Search engines and crawlers
+
+Search engines should only discover and index the public-facing pages. Private content should be protected by appropriate indexing controls.
+
+## 6. Product Positioning
+
+**Recommended positioning statement:**
+
+> The Shire Post is a private correspondence house for invited readers, notices, and archives. Public visitors may leave a calling card or request access; the post room itself remains behind the counter.
+
+This keeps the feeling charming and literary without claiming a relationship to any existing fictional universe.
+
+## 7. Information Architecture
+
+### Public Pages
+
+**Home `/`**
+The primary public page. It should feel complete and evergreen.
+
+Sections:
+
+* Hero
+* Short explanation
+* “Private by invitation” notice
+* Access request CTA
+* Sign-in CTA
+* Public notice board
+* Footer with privacy, terms, and disclaimer
+
+**About `/about`**
+A short, non-revealing explanation of the site’s concept.
+
+**Request Access `/access`**
+A form for visitors who believe they should have access. The form will simulate submission and redirect to a confirmation page that thanks the user for their request.
+
+**Sign In `/sign-in`**
+Authentication entry point. The form will simulate login functionality and redirect to a page that informs the user of an incorrect username or password.
+
+**Privacy `/privacy`**
+Plain-language privacy policy.
+
+**Terms `/terms`**
+Basic terms of use.
+
+**404 Page `/404`**
+A branded page for missing routes, without exposing whether private content exists.
+
+### Private Pages
+
+Private pages will not exist. Instead, the site will simulate private functionality by redirecting users to generic error or confirmation pages.
+
+## 8. Public Website Copy Direction
+
+### Homepage Hero
+
+**Headline:**
+The Shire Post
+
+**Subheadline:**
+A quiet house of correspondence for invited readers, private notices, and well-kept archives.
+
+**Body copy:**
+Most letters are carried behind the counter. Public visitors may leave a calling card, request access, or return with their invitation.
+
+**Primary CTA:**
+Request Access
+
+**Secondary CTA:**
+Sign In
+
+### Public Notice Board
+
+Use evergreen notices that do not imply fake recency.
+
+Examples:
+
+* “The public counter is open.”
+* “The archive remains available by invitation only.”
+* “Calling cards may be left through the access form.”
+* “Private correspondence is not listed, indexed, or displayed publicly.”
+
+Avoid dated announcements like “Updated weekly” unless the site will actually be updated weekly.
+
+### Footer Disclaimer
+
+Recommended footer language:
+
+> An independent private website. Not affiliated with any literary, film, game, or entertainment franchise.
+
+This avoids naming Tolkien or related entities directly while reducing confusion.
+
+## 9. Visual Design Requirements
+
+### Desired Mood
+
+The site should feel:
+
+* Warm
+* Pastoral
+* Quiet
+* Literary
+* Trustworthy
+* Handmade, but not amateur
+* Old-world, but not archaic
+* Private, but not secretive or suspicious
+
+### Visual Motifs to Use
+
+Approved motifs:
+
+* Envelopes
+* Postmarks
+* Wax seals
+* Ledger books
+* Mail slots
+* Village notice boards
+* Hedgerows
+* Footpaths
+* Oak leaves
+* Cottage windows
+* Ink bottles
+* Brass bells
+* Parcel twine
+* Hand-stamped labels
+
+### Visual Motifs to Avoid
+
+Avoid motifs that could look like Tolkien franchise references:
+
+* Rings as central symbols
+* Elvish/rune-like scripts
+* Fantasy maps
+* Grey wizards
+* Hobbits or hobbit-like figures
+* Orcs, elves, dwarves, ents, dragons
+* Round green doors as a dominant brand image
+* “One ring” visual language
+* Exact or close imitations of Tolkien illustrations, maps, or calligraphy
+
+### Color Palette
+
+Suggested palette:
+
+* Parchment cream
+* Warm ivory
+* Moss green
+* Deep ink brown
+* Postal red accent
+* Weathered brass
+* Charcoal text
+
+### Typography
+
+Suggested direction:
+
+* Serif display face for headings, giving a literary/postal feel.
+* Highly readable sans-serif or humanist serif for body copy.
+* Avoid decorative pseudo-rune fonts or fantasy-style lettering.
+
+## 10. Functional Requirements
+
+| ID    | Requirement              | Priority | Acceptance Criteria                                                                                         |
+| ----- | ------------------------ | -------: | ----------------------------------------------------------------------------------------------------------- |
+| FR-1  | Public homepage          |       P0 | Homepage loads at theshirepost.org, feels complete, includes clear explanation and CTAs.                    |
+| FR-2  | Evergreen public content |       P0 | No public content depends on frequent manual updates to look maintained.                                    |
+| FR-3  | Request access form      |       P0 | User can submit name, email, reason, invited-by field, and message. Form redirects to a confirmation page.   |
+| FR-4  | Sign-in entry            |       P0 | Invited users have a clear sign-in path. Form redirects to an error page simulating incorrect credentials.   |
+| FR-5  | Simulated private wall   |       P0 | No private page, asset, API, or content item exists; all private functionality is simulated.                |
+| FR-6  | Role-based appearance    |       P0 | Simulated roles (e.g., Admin, Member) appear in UI but have no backend implementation.                      |
+| FR-7  | No public previews       |       P0 | Public visitors cannot see titles, snippets, document names, usernames, member counts, or archive metadata. |
+| FR-8  | Secure private assets    |       P0 | No private files exist; all assets are public-facing.                                                       |
+| FR-9  | Branded 404/403 pages    |       P1 | Missing or unauthorized pages use generic messages and do not confirm private content exists.               |
+| FR-10 | Privacy and terms pages  |       P1 | Public privacy and terms pages exist and are linked from footer.                                            |
+| FR-11 | Open-source images       |       P0 | All images used on the site are sourced from open-source libraries or repositories.                         |
+| FR-12 | Open-source icons        |       P0 | All icons used on the site are sourced from open-source libraries or repositories.                          |
+
+## 11. Security Requirements
+
+The private area must be protected by real access controls, not obscurity. The implementation should use server-side authentication and authorization, secure sessions, and deny-by-default route handling.
+
+Recommended security baseline:
+
+* HTTPS only.
+* Authentication required for all private routes.
+* MFA required for administrators and strongly recommended for all private users. OWASP describes MFA as one of the strongest defenses against password-related attacks. ([OWASP Cheat Sheet Series][6])
+* Secure, HTTP-only cookies.
+* Server-side authorization checks on every private route and API endpoint.
+* No private content in public HTML, static JSON, JavaScript bundles, Open Graph tags, RSS feeds, sitemaps, or search metadata.
+* Rate limiting for sign-in and access request form.
+* CSRF protection for forms.
+* Email verification for account creation.
+* Audit logging for admin actions and authentication events.
+* Backups for private content.
+* Dependency and framework patching.
+* Use OWASP ASVS as the development security checklist; OWASP describes ASVS as a framework for web application security requirements and verification. ([OWASP][7])
+
+## 12. Privacy Requirements
+
+The site should collect the minimum personal information required.
+
+### Public access form fields
+
+Required:
+
+* Name
+* Email
+* Reason for request
+
+Optional:
+
+* Invited by
+* Message
+
+### Data handling
+
+* Do not sell or share personal data.
+* Do not display access requests publicly.
+* Allow admins to delete access requests.
+* Include a simple privacy policy explaining what is collected and why.
+* Avoid invasive analytics.
+
+## 13. Accessibility Requirements
+
+The public site should meet **WCAG 2.2 AA** as a target. WCAG 2.2 is the W3C’s current web accessibility recommendation and provides testable success criteria for making web content more accessible. ([W3C][8])
+
+Minimum acceptance criteria:
+
+* Keyboard navigable.
+* Visible focus states.
+* Sufficient color contrast.
+* Semantic HTML landmarks.
+* Form labels and error messages.
+* Descriptive button text.
+* Alt text for meaningful images.
+* No essential information conveyed only by color.
+* Mobile-friendly layout.
+* Reduced-motion support for animations.
+
+## 14. SEO and Public Discoverability
+
+The public site should be discoverable enough to look legitimate, but private content should remain invisible.
+
+Public SEO requirements:
+
+* Title: “The Shire Post”
+* Meta description: “A private correspondence house for invited readers, notices, and archives.”
+* Open Graph image using original postal artwork.
+* Sitemap containing only public pages.
+* Public pages may be indexed.
+
+Private SEO requirements:
+
+* Private pages require authentication.
+* Private pages use `noindex` where applicable.
+* Private routes are excluded from sitemap.
+* Private content never appears in public metadata or previews.
+
+## 15. Recommended Site Structure
+
+```text
+/
+  Home
+
+/about
+  About The Shire Post
+
+/access
+  Request Access
+
+/sign-in
+  Sign In
+
+/privacy
+  Privacy Policy
+
+/terms
+  Terms of Use
+
+/post-room
+  Private; authenticated
+
+/letters
+  Private; authenticated
+
+/notices
+  Private; authenticated
+
+/archive
+  Private; authenticated
+
+/admin
+  Private; admin only
+```
+
+## 16. Content Model
+
+### Public Notice
+
+Fields:
+
+* Title
+* Body
+* Display order
+* Active/inactive
+
+Public notices should be generic and non-sensitive.
+
+### Access Request
+
+Fields:
+
+* Name
+* Email
+* Invited by
+* Reason
+* Message
+* Submission date
+* Status: new, approved, rejected, archived
+* Admin notes
+
+### Private Letter or Post
+
+Fields:
+
+* Title
+* Body
+* Author
+* Created date
+* Updated date
+* Visibility group
+* Attachments
+* Tags
+
+Private content must never be exposed through public routes or unauthenticated APIs.
+
+## 17. MVP Scope
+
+### MVP Must Include
+
+* Polished homepage
+* About page
+* Request access page
+* Sign-in page
+* Privacy page
+* Terms page
+* Branded 404 page
+* Original visual identity
+* Authentication wall
+* Admin-only user approval
+* Private placeholder dashboard
+* No public private-content leakage
+
+### MVP May Exclude
+
+* Full private archive
+* Rich text editor
+* Notifications
+* Search inside private content
+* Comments
+* User profiles
+* File uploads
+* Complex permissions
+
+## 18. Future Enhancements
+
+Potential later features:
+
+* Private archive search
+* Private notices
+* Private file attachments
+* Email notifications to approved users
+* Custom postmark-style avatars
+* Admin dashboard
+* Seasonal but evergreen public illustration swaps
+* Private newsletter digest
+* Family/community directory, if appropriate
+* Private RSS or email digest, if secured
+
+## 19. Success Metrics
+
+The site is successful when:
+
+* A public visitor can immediately tell the site is private and intentional.
+* The site does not look abandoned or under construction.
+* No private content is visible without authentication.
+* The access request workflow works reliably.
+* The design feels charming and original.
+* The site avoids direct Tolkien/Hobbit/Lord of the Rings references.
+* Lighthouse performance, accessibility, and best-practice scores are high.
+* Admin maintenance is minimal.
+
+## 20. Acceptance Criteria for Launch
+
+Before launch, the following must be true:
+
+1. Homepage, About, Access, Sign In, Privacy, Terms, and 404 pages are complete.
+2. The public site contains no Tolkien quotes, names, maps, character references, copied art, or franchise marks.
+3. Private routes return unauthorized responses to unauthenticated users.
+4. Private content is not present in public page source, static assets, JavaScript bundles, metadata, sitemap, or search previews.
+5. Access request form works and sends/stores submissions securely.
+6. Admin can approve or reject users.
+7. HTTPS is enabled.
+8. Admin MFA is enabled.
+9. Footer disclaimer is present.
+10. Site passes accessibility, responsive layout, and basic security checks.
+
+## 21. Key Open Questions
+
+To refine this into an implementation-ready spec, the most important question is: **what is behind the wall?** For example, is this for family letters, a private newsletter, a TTRPG campaign archive, a small community, a document library, or something else? That answer determines the right authentication model, private content structure, and admin workflow.
+
+[1]: https://www.merriam-webster.com/dictionary/shire?utm_source=chatgpt.com "SHIRE Definition & Meaning"
+[2]: https://www.uspto.gov/trademarks/search/likelihood-confusion?utm_source=chatgpt.com "Likelihood of confusion"
+[3]: https://www.middleearth.com/licensing?utm_source=chatgpt.com "Licensing"
+[4]: https://www.tolkienestate.com/frequently-asked-questions-and-links/?utm_source=chatgpt.com "Frequently Asked Questions and Links - The Tolkien ..."
+[5]: https://developers.google.com/search/docs/crawling-indexing/robots/intro?utm_source=chatgpt.com "Robots.txt Introduction and Guide | Google Search Central"
+[6]: https://cheatsheetseries.owasp.org/cheatsheets/Multifactor_Authentication_Cheat_Sheet.html?utm_source=chatgpt.com "Multifactor Authentication - OWASP Cheat Sheet Series"
+[7]: https://owasp.org/www-project-application-security-verification-standard/?utm_source=chatgpt.com "OWASP Application Security Verification Standard (ASVS)"
+[8]: https://www.w3.org/TR/WCAG22/?utm_source=chatgpt.com "Web Content Accessibility Guidelines (WCAG) 2.2"
