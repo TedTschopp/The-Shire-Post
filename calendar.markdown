@@ -10,7 +10,7 @@ nav: calendar
 <div class="rule-short"></div>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
 
 .postmaster-ledger {
   font-family: 'Homemade Apple', cursive;
@@ -27,7 +27,7 @@ nav: calendar
 .postmaster-ledger table,
 .postmaster-ledger th,
 .postmaster-ledger td {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Dana Library Hand', monospace;
 }
 </style>
 
@@ -38,7 +38,7 @@ nav: calendar
 
 <section class="notice" style="margin-top: 22px;">
   <h3>Today, in both calendars</h3>
-  <table class="ledger" style="max-width: 760px;">
+  <table class="ledger">
     <thead>
       <tr>
         <th scope="col">Common calendar</th>
@@ -60,7 +60,7 @@ nav: calendar
     The Shire year has twelve thirty-day months, plus festival days that do not
     belong to any month.
   </p>
-  <table class="ledger" style="max-width: 760px;">
+  <table class="ledger">
     <thead>
       <tr>
         <th scope="col">Common (approx.)</th>
@@ -89,7 +89,7 @@ nav: calendar
 
 <section class="notice" style="margin-top: 22px;">
   <h3>Weekdays used by the Post</h3>
-  <table class="ledger" style="max-width: 760px;">
+  <table class="ledger">
     <thead>
       <tr>
         <th scope="col">Common name</th>
@@ -121,7 +121,7 @@ nav: calendar
     <span id="conversion-help" class="hint">If no date is chosen, today's date is used.</span>
   </div>
 
-  <table class="ledger" style="max-width: 760px;">
+  <table class="ledger">
     <thead>
       <tr>
         <th scope="col">Rendered field</th>
@@ -188,7 +188,7 @@ One technical note for neighbors: the historical BC/AD sequence has no year zero
 | Fifth Age | Age of Cities and Kings | c. 4,864–2,433 BC | 2,432 years | Reconstructed later age |
 | Sixth Age | Age of Iron, Law, and Covenant | c. 2,432–1 BC | 2,432 years | Reconstructed later age |
 | Seventh Age | Imperial Age | AD 1–present | ongoing | Current age |
-{: .ledger style="max-width: 760px;" }
+{: .ledger }
 
 ### Conversion rules used at this desk
 
@@ -200,7 +200,7 @@ One technical note for neighbors: the historical BC/AD sequence has no year zero
 | Fourth Age | Fo.A. year n = 7298 - n BC |
 | Third Age | T.A. year n = 10319 - n BC |
 | Second Age | S.A. year n = 13760 - n BC |
-{: .ledger style="max-width: 760px;" }
+{: .ledger }
 
 So in our current ledger style:
 
@@ -226,7 +226,7 @@ The name marks not merely one imperial throne, but the long imperial frame of la
 | Fifth Age | Age of Cities and Kings | c. 4,864–2,433 BC |
 | Sixth Age | Age of Iron, Law, and Covenant | c. 2,432–1 BC |
 | Seventh Age | Imperial Age | AD 1–present |
-{: .ledger style="max-width: 760px;" }
+{: .ledger }
 
 Today, by this ledger:
 
