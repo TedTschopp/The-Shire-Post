@@ -9,6 +9,25 @@ nav: calendar
 <h1 class="notice-title">Calendar Reckoning at the Counter</h1>
 <div class="rule-short"></div>
 
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
+
+.postmaster-ledger {
+  font-family: 'Marck Script', cursive;
+  letter-spacing: 0.01em;
+}
+
+.postmaster-ledger table,
+.postmaster-ledger th,
+.postmaster-ledger td,
+.postmaster-ledger li,
+.postmaster-ledger p,
+.postmaster-ledger h2,
+.postmaster-ledger h3 {
+  font-family: 'Marck Script', cursive;
+}
+</style>
+
 <p class="lede">
   This office keeps records in the Shire Reckoning and accepts appointments from
   neighbors who use the Common (Gregorian) calendar.
@@ -141,6 +160,8 @@ nav: calendar
   </ul>
 </section>
 
+<section class="postmaster-ledger" aria-label="From The Postmaster's Ledger">
+
 ## From The Postmaster's Ledger
 
 I keep these entries as my father kept them, and his father before him, from the late Fourth Age onward.  
@@ -223,6 +244,8 @@ Today, by this ledger:
 - [Shang dynasty (Britannica)](https://www.britannica.com/topic/Shang-dynasty)
 - [Zhou dynasty (Britannica)](https://www.britannica.com/topic/Zhou-dynasty)
 - [Hellenistic Age (Britannica)](https://www.britannica.com/event/Hellenistic-Age)
+
+</section>
 
 <script>
 (() => {
