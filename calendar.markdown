@@ -160,7 +160,7 @@ nav: calendar
   </ul>
 </section>
 
-<section class="postmaster-ledger" aria-label="From The Postmaster's Ledger">
+<section class="postmaster-ledger" aria-label="From The Postmaster's Ledger" markdown="1">
 
 ## From The Postmaster's Ledger
 
@@ -185,6 +185,7 @@ One technical note for neighbors: the historical BC/AD sequence has no year zero
 | Fifth Age | Age of Cities and Kings | c. 4,864–2,433 BC | 2,432 years | Reconstructed later age |
 | Sixth Age | Age of Iron, Law, and Covenant | c. 2,432–1 BC | 2,432 years | Reconstructed later age |
 | Seventh Age | Imperial Age | AD 1–present | ongoing | Current age |
+{: .ledger style="max-width: 760px;" }
 
 ### Conversion rules used at this desk
 
@@ -196,6 +197,7 @@ One technical note for neighbors: the historical BC/AD sequence has no year zero
 | Fourth Age | Fo.A. year n = 7298 - n BC |
 | Third Age | T.A. year n = 10319 - n BC |
 | Second Age | S.A. year n = 13760 - n BC |
+{: .ledger style="max-width: 760px;" }
 
 So in our current ledger style:
 
@@ -221,6 +223,7 @@ The name marks not merely one imperial throne, but the long imperial frame of la
 | Fifth Age | Age of Cities and Kings | c. 4,864–2,433 BC |
 | Sixth Age | Age of Iron, Law, and Covenant | c. 2,432–1 BC |
 | Seventh Age | Imperial Age | AD 1–present |
+{: .ledger style="max-width: 760px;" }
 
 Today, by this ledger:
 
