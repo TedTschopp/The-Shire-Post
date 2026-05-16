@@ -10,10 +10,10 @@ nav: calendar
 <div class="rule-short"></div>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
+/* Old Man Eloquent loaded via site.css */
 
 .postmaster-ledger {
-  font-family: 'Homemade Apple', cursive;
+  font-family: 'Old Man Eloquent', cursive;
   letter-spacing: 0.01em;
 }
 
@@ -21,7 +21,7 @@ nav: calendar
 .postmaster-ledger p,
 .postmaster-ledger h2,
 .postmaster-ledger h3 {
-  font-family: 'Homemade Apple', cursive;
+  font-family: 'Old Man Eloquent', cursive;
 }
 
 .postmaster-ledger table,

@@ -1,0 +1,12 @@
+/* Webfont: OldManEloquent-Bold */@font-face {
+    font-family: 'OldManEloquent';
+    src: url('OldManEloquent-Bold.eot'); /* IE9 Compat Modes */
+    src: url('OldManEloquent-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('OldManEloquent-Bold.woff') format('woff'), /* Modern Browsers */
+         url('OldManEloquent-Bold.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('OldManEloquent-Bold.svg#OldManEloquent-Bold') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
+}
+

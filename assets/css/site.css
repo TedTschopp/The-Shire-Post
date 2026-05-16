@@ -1,6 +1,24 @@
 @import url("./colors_and_type.css");
 @import url("https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css");
 
+/* ---- Old Man Eloquent (self-hosted) ---- */
+@font-face {
+  font-family: 'Old Man Eloquent';
+  src: url('/assets/fonts/Old Man Eloquent Web/OldManEloquent.woff') format('woff'),
+       url('/assets/fonts/Old Man Eloquent Web/OldManEloquent.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Old Man Eloquent';
+  src: url('/assets/fonts/Old Man Eloquent Web/OldManEloquent-Bold.woff') format('woff'),
+       url('/assets/fonts/Old Man Eloquent Web/OldManEloquent-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* ---- Dana Library Hand (self-hosted) ---- */
 @font-face {
   font-family: 'Dana Library Hand';
