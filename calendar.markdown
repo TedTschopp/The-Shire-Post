@@ -168,9 +168,8 @@ nav: calendar
 ## From The Postmaster's Ledger
 
 I keep these entries as my father kept them, and his father before him, from the late Fourth Age onward.  
-The reckoning has been copied by hand from clerk to clerk at this counter.
 
-Yes, with the Seventh Age beginning at the AD epoch, the cleaner Tolkien basis is not the old "WWII ends the Sixth Age" model, but Tolkien's later chronology in The Nature of Middle-earth: the Seventh Age is AD-aligned. In this office ledger, that means the Imperial Age year matches the AD year.
+The reckoning has been copied by hand from clerk to clerk at this counter.
 
 One technical note for neighbors: the historical BC/AD sequence has no year zero. We therefore keep "the boundary" in story terms, but use standard historical numbering in practical conversion.
 
