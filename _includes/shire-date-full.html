@@ -1,6 +1,6 @@
 {% assign source_date = include.date | default: "now" %}
 {% assign g_year = source_date | date: "%Y" | plus: 0 %}
-{% assign age_year = g_year | minus: 1945 %}
+{% assign imp_year = g_year %}
 {% assign day_of_year = source_date | date: "%j" | plus: 0 %}
 
 {% assign leap = false %}
@@ -90,8 +90,8 @@
 
 {% assign shire_weekdays = "Sterday,Sunday,Monday,Trewsday,Hevensday,Mersday,Highday" | split: "," %}
 {% if shire_festival != "" %}
-	{{ shire_festival }}, 7A {{ age_year }}
+	{{ shire_festival }}, Imp.A. {{ imp_year }}
 {% else %}
 	{% assign weekday_index = shire_day | minus: 1 | modulo: 7 %}
-	{{ shire_weekdays[weekday_index] }}, {{ shire_day }} {{ shire_month }}, 7A {{ age_year }}
+	{{ shire_weekdays[weekday_index] }}, {{ shire_day }} {{ shire_month }}, Imp.A. {{ imp_year }}
 {% endif %}

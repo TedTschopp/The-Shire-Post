@@ -137,9 +137,92 @@ nav: calendar
     <li>Bring appointments in Common dates if that is what you use; the clerk will convert at the desk.</li>
     <li>If your letter says Highday, treat it as Friday for travel and scheduling.</li>
     <li>During Lithe days and Yule days, expect date labels that are day names rather than month/day numbers.</li>
-    <li>The year count shown as <strong>7A</strong> is the office age-reckoning. 1945 is treated as the end of the Sixth Age, so 1946 is 7A 1.</li>
+    <li>The year count shown as <strong>Imp.A.</strong> is the office age-reckoning. In this system, <strong>Imp.A. year = AD year</strong>.</li>
   </ul>
 </section>
+
+## From The Postmaster's Ledger
+
+I keep these entries as my father kept them, and his father before him, from the late Fourth Age onward.  
+The reckoning has been copied by hand from clerk to clerk at this counter.
+
+Yes, with the Seventh Age beginning at the AD epoch, the cleaner Tolkien basis is not the old "WWII ends the Sixth Age" model, but Tolkien's later chronology in The Nature of Middle-earth: the Seventh Age is AD-aligned. In this office ledger, that means the Imperial Age year matches the AD year.
+
+One technical note for neighbors: the historical BC/AD sequence has no year zero. We therefore keep "the boundary" in story terms, but use standard historical numbering in practical conversion.
+
+### Master chronology (postmaster's office copy)
+
+| Age / period | Office name | Approx. real-world span | Length | Clerk's note |
+| --- | --- | --- | --- | --- |
+| Creation / Ainulindale | Creation before Time | Outside ordinary dating | - | Mythic, not a counting age |
+| Days before Days | Shaping of Arda | c. 62,000–28,700 BC | c. 33,500 years | Before sun-counted ages |
+| Years of the Trees | Age of the Trees / Starlight | c. 28,700–18,661 BC | c. 10,000 years | Before First Age rising |
+| First Age | Elder Age | c. 18,661–13,760 BC | 4,902 years | War against Morgoth |
+| Second Age | Numenorean Age | c. 13,759–10,319 BC | 3,441 years | Sea-kings and Downfall |
+| Third Age | Age of the Rings | c. 10,318–7,298 BC | 3,021 years | Ends with Sauron's fall |
+| Fourth Age | Age of Seed and Hearth | c. 7,297–4,865 BC | 2,433 years | Reconstructed later age |
+| Fifth Age | Age of Cities and Kings | c. 4,864–2,433 BC | 2,432 years | Reconstructed later age |
+| Sixth Age | Age of Iron, Law, and Covenant | c. 2,432–1 BC | 2,432 years | Reconstructed later age |
+| Seventh Age | Imperial Age | AD 1–present | ongoing | Current age |
+
+### Conversion rules used at this desk
+
+| Reckoning | Conversion |
+| --- | --- |
+| Imperial Age | Imp.A. year = AD year |
+| Sixth Age | Si.A. year n = 2433 - n BC |
+| Fifth Age | Fi.A. year n = 4865 - n BC |
+| Fourth Age | Fo.A. year n = 7298 - n BC |
+| Third Age | T.A. year n = 10319 - n BC |
+| Second Age | S.A. year n = 13760 - n BC |
+
+So in our current ledger style:
+
+- Imp.A. 2026 = AD 2026
+- Si.A. 2432 = 1 BC
+- Si.A. 2406 = 27 BC
+
+### Why the name "Imperial Age" is kept
+
+The name marks not merely one imperial throne, but the long imperial frame of law, calendar, church, administration, and inherited statecraft that has shaped the AD-counted world. In short: the order changed hands many times, but the grammar of empire endured.
+
+### Clean office summary
+
+| Age | Office name | Dates |
+| --- | --- | --- |
+| Creation | Creation before Time | before ordinary reckoning |
+| Days before Days | Shaping of Arda | c. 62,000–28,700 BC |
+| Years of the Trees | Age of Trees / Starlight | c. 28,700–14,349 BC, overlapping the First Age after c. 18,661 BC |
+| First Age | Elder Age | c. 18,661–13,760 BC |
+| Second Age | Numenorean Age | c. 13,759–10,319 BC |
+| Third Age | Age of the Rings | c. 10,318–7,298 BC |
+| Fourth Age | Age of Seed and Hearth | c. 7,297–4,865 BC |
+| Fifth Age | Age of Cities and Kings | c. 4,864–2,433 BC |
+| Sixth Age | Age of Iron, Law, and Covenant | c. 2,432–1 BC |
+| Seventh Age | Imperial Age | AD 1–present |
+
+Today, by this ledger:
+
+> Imperial Age 2026  
+> May 15, Imp.A. 2026
+
+### Sources copied into the register
+
+- [Later Ages - Tolkien Gateway](https://tolkiengateway.net/wiki/Later_Ages)
+- [Chronology - Christian Era (Britannica)](https://www.britannica.com/topic/chronology/Christian)
+- [Roman Empire (Britannica)](https://www.britannica.com/place/Roman-Empire)
+- [Days before days - Tolkien Gateway](https://tolkiengateway.net/wiki/Days_before_days)
+- [Years of the Trees - Tolkien Gateway](https://tolkiengateway.net/wiki/Years_of_the_Trees)
+- [First Age - Tolkien Gateway](https://tolkiengateway.net/wiki/First_Age)
+- [Third Age - Tolkien Gateway](https://tolkiengateway.net/wiki/Third_Age)
+- [Neolithic Revolution (Britannica)](https://www.britannica.com/event/Neolithic-Revolution)
+- [Where writing first developed (Britannica)](https://www.britannica.com/question/Where-did-writing-first-develop)
+- [Egypt summary (Britannica)](https://www.britannica.com/summary/Egypt)
+- [Bronze Age (Britannica)](https://www.britannica.com/event/Bronze-Age)
+- [Indus civilization (Britannica)](https://www.britannica.com/topic/Indus-civilization)
+- [Shang dynasty (Britannica)](https://www.britannica.com/topic/Shang-dynasty)
+- [Zhou dynasty (Britannica)](https://www.britannica.com/topic/Zhou-dynasty)
+- [Hellenistic Age (Britannica)](https://www.britannica.com/event/Hellenistic-Age)
 
 <script>
 (() => {
@@ -174,7 +257,7 @@ nav: calendar
 
   const toShire = (date) => {
     const year = date.getUTCFullYear();
-    const ageYear = year - 1945;
+    const impYear = year;
     const doy = dayOfYear(date);
     const leap = isLeapYear(year);
 
@@ -256,8 +339,8 @@ nav: calendar
 
     if (festival) {
       return {
-        full: `${festival}, 7A ${ageYear}`,
-        short: `${festival} · 7A ${ageYear}`,
+        full: `${festival}, Imp.A. ${impYear}`,
+        short: `${festival} · Imp.A. ${impYear}`,
         note: 'Festival day: use the festival name only, no weekday or month number.'
       };
     }
@@ -265,8 +348,8 @@ nav: calendar
     const weekdayIndex = ((day - 1) % 7 + 7) % 7;
     const weekday = shireWeekdays[weekdayIndex];
     return {
-      full: `${weekday}, ${day} ${month}, 7A ${ageYear}`,
-      short: `${day} ${month} · 7A ${ageYear}`,
+      full: `${weekday}, ${day} ${month}, Imp.A. ${impYear}`,
+      short: `${day} ${month} · Imp.A. ${impYear}`,
       note: 'Ledger day: use the Shire weekday and month exactly as printed.'
     };
   };
