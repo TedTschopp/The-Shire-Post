@@ -49,6 +49,15 @@
   font-display: swap;
 }
 
+/* ---- IM Fell English (Google Fonts) ---- */
+@font-face {
+  font-family: 'IM Fell English';
+  src: url('https://fonts.gstatic.com/s/imfellenglish/v13/KtkxAKiDZI_td1Lkx62xHZHDtgO_Y-bvTYlg.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* ----------------------------------------------------------------
    The Shire Post — public site styles
    Built on top of the design tokens. Bootstrap 5.3 utilities are
@@ -288,3 +297,8 @@ h2.notice-title { font: var(--t-h2); margin: 6px 0 14px; }
 .slip { border: 1px solid var(--ink); background: var(--paper); max-width: 520px; margin: 24px auto; }
 .slip .body { padding: 22px 24px; }
 .slip .stub { border-top: var(--border-dashed); padding: 14px 24px; display: flex; justify-content: space-between; align-items: center; font: var(--t-ledger); font-size: 11px; text-transform: uppercase; letter-spacing: var(--tracking-eyebrow); color: var(--ink-soft); }
+
+/* Apply IM Fell English to all headers */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'IM Fell English', serif;
+}
