@@ -38,7 +38,7 @@ nav: calendar
     The Shire year has twelve thirty-day months, plus festival days that do not
     belong to any month.
   </p>
-  <table class="ledger" style="max-width: 920px;">
+  <table class="ledger" style="max-width: 760px;">
     <thead>
       <tr>
         <th scope="col">Common (approx.)</th>
@@ -99,7 +99,7 @@ nav: calendar
     <span id="conversion-help" class="hint">If no date is chosen, today's date is used.</span>
   </div>
 
-  <table class="ledger" style="max-width: 920px; margin-top: 14px;">
+  <table class="ledger" style="max-width: 760px;">
     <thead>
       <tr>
         <th scope="col">Rendered field</th>
