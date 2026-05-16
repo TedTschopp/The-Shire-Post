@@ -10,21 +10,24 @@ nav: calendar
 <div class="rule-short"></div>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&family=JetBrains+Mono:wght@400;500&display=swap');
 
 .postmaster-ledger {
-  font-family: 'Marck Script', cursive;
+  font-family: 'Homemade Apple', cursive;
   letter-spacing: 0.01em;
 }
 
-.postmaster-ledger table,
-.postmaster-ledger th,
-.postmaster-ledger td,
 .postmaster-ledger li,
 .postmaster-ledger p,
 .postmaster-ledger h2,
 .postmaster-ledger h3 {
-  font-family: 'Marck Script', cursive;
+  font-family: 'Homemade Apple', cursive;
+}
+
+.postmaster-ledger table,
+.postmaster-ledger th,
+.postmaster-ledger td {
+  font-family: 'JetBrains Mono', monospace;
 }
 </style>
 
