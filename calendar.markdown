@@ -29,6 +29,12 @@ nav: calendar
 .postmaster-ledger td {
   font-family: 'Dana Library Hand', monospace;
 }
+
+.postmaster-ledger .source-register,
+.postmaster-ledger .source-register li,
+.postmaster-ledger .source-register a {
+  font-family: 'Dana Library Hand', monospace;
+}
 </style>
 
 <p class="lede">
@@ -249,6 +255,7 @@ Today, by this ledger:
 - [Shang dynasty (Britannica)](https://www.britannica.com/topic/Shang-dynasty)
 - [Zhou dynasty (Britannica)](https://www.britannica.com/topic/Zhou-dynasty)
 - [Hellenistic Age (Britannica)](https://www.britannica.com/event/Hellenistic-Age)
+{: .source-register }
 
 </section>
 
