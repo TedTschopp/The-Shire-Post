@@ -37,10 +37,7 @@ nav: calendar
 }
 </style>
 
-<p class="lede">
-  This office keeps records in the Shire Reckoning and accepts appointments from
-  neighbors who use the Common (Gregorian) calendar.
-</p>
+<p class="lede"> This office keeps records in the Shire Reckoning and accepts appointments from neighbors who use the Common (Gregorian) calendar.</p>
 
 <section class="notice" style="margin-top: 22px;">
   <h3>Today, in both calendars</h3>
